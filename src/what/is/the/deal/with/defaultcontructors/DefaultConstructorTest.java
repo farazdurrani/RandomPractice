@@ -6,7 +6,9 @@ public class DefaultConstructorTest {
 	 * The deal is, if a contructor with args is defined by you, Java will not create a no-args/default constuctor for you.
 	 */
 	public static void main(String[] args) {
-		PersonWithNoDefaultConstructor p = new PersonWithNoDefaultConstructor();
+//		PersonWithNoDefaultConstructor p = new PersonWithNoDefaultConstructor();
+		
+		PersonWithNoDefaultConstructor person = new PersonWithNoDefaultConstructor(5,"faraz");
 	}
 
 }

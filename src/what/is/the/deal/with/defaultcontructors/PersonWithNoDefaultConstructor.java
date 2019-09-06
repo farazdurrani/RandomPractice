@@ -10,7 +10,13 @@ public class PersonWithNoDefaultConstructor {
 		this.age = age;
 		this.name = name;
 	}
-
+	
+	public PersonWithNoDefaultConstructor(int age) {
+		this.age = age;
+	}
+	
+	
+	
 	@Override
 	public String toString() {
 		return "PersonWithNoDefaultConstructor [age=" + age + ", name=" + name
