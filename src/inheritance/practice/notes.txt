@@ -1,0 +1,5 @@
+public and protected members are accessible in subclasses (all the way down).
+But protected members are only accessible in the same package.
+private are only accessible inside the class.
+
+A subclass always calls superclass's constructor implicitly if super(..) is not called
