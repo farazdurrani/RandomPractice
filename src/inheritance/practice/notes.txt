@@ -1,5 +1,20 @@
+Object is the super most class. 
 public and protected members are accessible in subclasses (all the way down).
 But protected members are only accessible in the same package.
 private are only accessible inside the class.
 
 A subclass always calls superclass's constructor implicitly if super(..) is not called
+A default/no args constructor is called implicitly
+
+Constructors are not inherited. Methods are. 
+
+If a method in a superclass is public, it cannot be made protected or private in any of the subclasses. 
+If a method in a superclass is protected, it cannot be made private in any of the subclasses.
+
+If a method or Constructor has exception thrown in signature, then client code must try/catch or delegate.
+If a method or constructor does not have exception thrown in signature, then client code doesn't need to try/catch or delegate.
+
+Intance methods shouldn't be called in a contructor. 
+
+protected instant members are available to subclasses even if they are created in a different package.
+But protected instant members are not available when an object of a class that contains protected members are created in a different package.

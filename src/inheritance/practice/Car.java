@@ -3,9 +3,15 @@ package inheritance.practice;
 public class Car extends Vehicle {
 	public Car() {
 		super();
-		System.out.println("From Car " + getColor());
-		System.out.println("From Car " + getTyres());
+		System.out.println("From Car " + getColor());// Instance methods (albeit superclass's) shouldn't be called in a
+														// constructor.
+		System.out.println("From Car " + getTyres());// Instance methods (albeit superclass's) shouldn't be called in a
+														// constructor.
 	}
+
+	/**
+	 * Instance methods (albeit superclass's) shouldn't be called in a constructor.
+	 */
 
 	@Override
 	public String toString() {
@@ -15,8 +21,5 @@ public class Car extends Vehicle {
 			+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
 			+ ", toString()=" + super.toString() + "]";
 	}
-	
-	
-	
-	
+
 }
