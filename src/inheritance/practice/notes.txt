@@ -44,3 +44,9 @@ Non private static methods are inherited, but they cannot be overridden.
 
 If you declare a method as abstract, a class must also be declared as abstract. 
 If you entend an abstract class, you must either override the abstract method or declare the extending class as abstract.
+
+Issues with calling instance methods in a Constructor:
+
+The subclass constructor first calls a constructor in its direct superclass. 
+At this point, any subclass instance cariable initialiazation code in the subclass constructor's body has not yet executed. 
+If the superclass constructor then calls a method that the subclass overrides, the subclass's version executes.
