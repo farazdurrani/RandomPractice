@@ -18,3 +18,29 @@ Intance methods shouldn't be called in a contructor.
 
 protected instant members are available to subclasses even if they are created in a different package.
 But protected instant members are not available when an object of a class that contains protected members are created in a different package.
+
+Polymorphism (extensible):
+Lets say a superclass has a method that every subclass overides with distinct behaviors. 
+We create an object of a subclass but assign it to a superclass variable. 
+Then We invoke a common method on this superclass variable. 
+Program will invoke subclass method by determining it at runtime that this superclass variable holds a reference of subclass object. 
+This is polymorphism. Same method but different forms. Form is determined at runtime.
+
+Abstract classes:
+
+n abstract class provides a default behavior that your implementation can reuse.
+https://stackoverflow.com/a/37905386/4828463
+
+
+A class that you never intend to create objects of, can be abstract classes. 
+These classes cannot be instantiated and must be extended because abstract classes are incomplete. 
+Abstract methods do not provide implementations. 
+A class that contains any abstract methods must be explicitly devclared abstract even if that class contains some concrete methods.
+Each cibcrete subclass of an abstract ckass must provide concrete implementations of each of the superclass's abstract methods. 
+
+Constructors and static methods cannot be declared abstract. Constructors are not inherited so contructors cannot be abstract.
+
+Non private static methods are inherited, but they cannot be overridden.
+
+If you declare a method as abstract, a class must also be declared as abstract. 
+If you entend an abstract class, you must either override the abstract method or declare the extending class as abstract.

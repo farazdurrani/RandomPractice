@@ -25,6 +25,9 @@ public class Test {
 //		catch (Exception e) {
 //		}
 
-		Vehicle car2 = new Car2();
+//		Vehicle car2 = new Car2();
+
+		Car car55 = new Car();
+		System.out.println("From main class car55.getColor(): " + car55.getColor());
 	}
 }
