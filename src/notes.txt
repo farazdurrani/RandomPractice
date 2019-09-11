@@ -50,3 +50,18 @@ Issues with calling instance methods in a Constructor:
 The subclass constructor first calls a constructor in its direct superclass. 
 At this point, any subclass instance cariable initialiazation code in the subclass constructor's body has not yet executed. 
 If the superclass constructor then calls a method that the subclass overrides, the subclass's version executes.
+
+Interfaces:
+
+Till Java 7, Interfaces could only contains constants and abstract methods. 
+Interfaces must be public.
+It cannot provide any method implementation details and instance variables.
+All methods decalred in an interface are implicitly public. And all fields are implicitly public, static, and final.
+
+A class can extend only one class, but it can implement multiple interfaces
+
+But in Java 8, default method implementations can be provided. And if implementing class doesn't override those methods, default methods are used.
+In Java 9, private methods could also be added.
+
+Marker Interfaces have no methods declerations and no constants. 
+They are used to add a IS-A relationships to classes like how I did when writing to multiple documents using Spring Writer
