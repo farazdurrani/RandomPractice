@@ -65,3 +65,4 @@ In Java 9, private methods could also be added.
 
 Marker Interfaces have no methods declerations and no constants. 
 They are used to add a IS-A relationships to classes like how I did when writing to multiple documents using Spring Writer
+
