@@ -20,8 +20,7 @@ But if a method is not overridden in a child class, parents method implementatio
 If you create a new method in a child class, and if the object is of type Parent but it holds a child reference, 
 then you can call child's method by downcasting it. 
 
-If a method is overridden and you call that method, that method will be called. 
-But if that method is not overridden, parent's method will be called. 
+If a method is overridden and you call that method, that method will be called. But if that method is not overridden, parent's method will be called. 
 
 Intance methods shouldn't be called in a contructor. 
 
