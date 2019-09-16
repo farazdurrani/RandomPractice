@@ -4,11 +4,11 @@ import inheritance.practice2.Car2;
 
 public class Test {
 	public static void main(String[] args) {
-//		Vehicle car = new Car();
-//		System.out.println("Can access super class methods called on subclass? "
-//			+ car.getColor());
-//		
-//		System.out.println("Faraz\n" + car);
+		Vehicle car = new Car();
+		System.out.println("Can access super class methods called on subclass? "
+			+ car.getColor());
+		
+		System.out.println("Faraz\n" + car);
 
 //		Vehicle toyota = new Toyota();
 //		ThrowException te = new ThrowException();
@@ -27,7 +27,7 @@ public class Test {
 
 //		Vehicle car2 = new Car2();
 
-		Car car55 = new Car();
-		System.out.println("From main class car55.getColor(): " + car55.getColor());
+//		Car car55 = new Car();
+//		System.out.println("From main class car55.getColor(): " + car55.getColor());
 	}
 }
