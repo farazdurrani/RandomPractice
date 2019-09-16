@@ -105,5 +105,6 @@ This enables catch to handle related exceoptions polymorphically.
 
 It is a compilation error to catch the exact same type in two different catch blocks associated with a particular try block.
 One must use handle specific exception in a catch block, and then work towards more general exception.
-Subclass exceptions first, then Superclass exceptions.
+Subclass exceptions first, then Superclass exceptions. Otherwise it's a compilation error.
+
  
