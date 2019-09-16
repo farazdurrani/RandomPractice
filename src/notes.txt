@@ -24,7 +24,7 @@ If a method is overridden and you call that method, that method will be called. 
 
 Intance methods shouldn't be called in a contructor. 
 
-protected instant members are available to subclasses even if they are created in a different package.
+Protected instant members are available to subclasses even if subclasses are created in a different package.
 But protected instant members are not available when an object of a class that contains protected members are created in a different package.
 
 Polymorphism (extensible):
@@ -81,3 +81,29 @@ You can also have static methods in interface. You just cannot override them.
 
 Functional Interface:
 an interface that contains exactly one abstract method.
+
+
+Exception:
+
+You can throw Throwable (instead of an Exception). You can also rethrow the same exception by 'throw e'.
+Don't use Error. Throwable is extended by 2 classes -> Error and Exception.
+Error shouldn't be used by developers. It is mostly used by jvm.
+Developers should use Exception or any of the classes that extend Exception in exception-handling mechanism. 
+
+Unchecked Exception:
+
+RuntimeException and any of its subclasses are unchecked exception.
+Error and any of it's subclasses are also unchecked exceptions. These are unrecoverable exceptions and developers should avoid from handing them.
+Usually, unchecked exceptions are not wrapped around try statement. Even though you can if you want to.
+
+Checked Exception:
+Any exception that inherits from class Exception but not thru RuntimeException is checked exception.
+Checked exceptions must be handled by this formula: "catch-or-declare." Otherwise, compiler complains. 
+
+If a catch handler is writtern to catch superclass exception objects, it can also catch all objects of that class's subclasses.
+This enables catch to handle related exceoptions polymorphically.
+
+It is a compilation error to catch the exact same type in two different catch blocks associated with a particular try block.
+One must use handle specific exception in a catch block, and then work towards more general exception.
+Subclass exceptions first, then Superclass exceptions.
+ 
