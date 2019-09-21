@@ -107,4 +107,17 @@ It is a compilation error to catch the exact same type in two different catch bl
 One must use handle specific exception in a catch block, and then work towards more general exception.
 Subclass exceptions first, then Superclass exceptions. Otherwise it's a compilation error.
 
- 
+Catch block can be optional (specially if Runtimeexception is thrown or unchecked exception is thrown). 
+
+You can place finally block WITHOUT catch block.
+
+Finally block will run no matter what. 
+
+If any of the catch statements doesn't catch the exception, then a calling method's catch block will try to catch it. 
+It will keep going up. it is possible that an exception will remain uncaught.
+
+try-with-resources block can be used to close resources automatically. 
+You can only use an object of a class that implements AutoCloseable interface and override close method. 
+That way, you don't have to worry about cleaning up resources by writing extra finally block in your code.
+
+
