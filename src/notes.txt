@@ -120,4 +120,22 @@ try-with-resources block can be used to close resources automatically.
 You can only use an object of a class that implements AutoCloseable interface and override close method. 
 That way, you don't have to worry about cleaning up resources by writing extra finally block in your code.
 
+Collection (singular) Interface:
+It is an interface that provides functionalities such as adding, removing, elements. size. iterator. and convert to array. 
+And also constructors to transform elements from one type of collection to another (list to set or vice versa)
 
+Collections (plural) Class:
+Collection is a class that provide static convenience methods to search, sort, and perform other operations.
+It also provides methods to get synchronized versions of List, Map, etc.
+
+When removing elements from list, and if looping over them, use Iterator!
+
+Arrays.asList is interesting. it returns a unmodifiable list. Meaning you cannot add or substract elements from the list.
+But you can still make changes to the elements inside them. Which will also reflect back to original array.
+
+Comparable vs Comparator.
+If you want to have your object be sorted just by single property, implement Comparable and override compareTo method.
+But if you want to sort your object by multiple properties, implement Comparator and override compare method that takes two arguments.
+you can create them as static classes inside your object class or seperate regular classes.
+
+You provide your comparator as a parameter to Collections.sort method.

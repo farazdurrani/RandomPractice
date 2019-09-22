@@ -1,3 +1,5 @@
+import java.io.BufferedWriter;
+import java.io.Writer;
 
 public class ModulusPrac1 {
 	public static void main(String[] args) {
@@ -103,7 +105,8 @@ public class ModulusPrac1 {
 //		
 //		writeIndex = (writeIndex + 1) % buffer.length;
 //		System.out.println(writeIndex);
-		
+		Writer writer = null;
+		BufferedWriter bw = new BufferedWriter(writer);
 		
 	}
 }
