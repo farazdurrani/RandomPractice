@@ -2,6 +2,8 @@ package reverse.sort;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Driver {
 	public static void main(String[] args) {
@@ -32,6 +34,16 @@ public class Driver {
 			System.out.print(person + " ");
 		}
 		System.out.println();
+
+		Set<Person> set = new TreeSet<>(
+			(Person per1, Person per2) -> per1.getAge() - per2.getAge()); // you cannot use .compareTo here
+		. It can only
+																			// be
+																			// used on an object that implements
+																			// Comparable
+		Set<Person> set2 = new TreeSet<>(
+			(Person per1, Person per2) -> per1.getName()
+				.compareTo(per2.getName()));
 	}
 
 }
