@@ -1,6 +1,6 @@
 Object is the super most class. 
 public and protected members are accessible in subclasses (all the way down).
-But protected members are only accessible in the same package.
+But protected members are only accessible in the same package. A class cannot be protected.
 private are only accessible inside the class.
 
 A subclass always calls superclass's constructor implicitly if super(..) is not called
@@ -139,3 +139,21 @@ But if you want to sort your object by multiple properties, implement Comparator
 you can create them as static classes inside your object class or seperate regular classes.
 
 You provide your comparator as a parameter to Collections.sort method.
+
+HashMap!
+A key value store. Key must be unique. Key can be any object. 
+That object must have good hashCode and equals method implementation so when storing that object as a key in a HashMap, it is unique!
+And also, keys should be immutable!
+
+HashMap allows null values as keys. 
+
+HashMap by default creates 16 buckets when starting. 
+
+When inserting a key/value, Java finds the hash of key, calculates the index, and places key/value at that index.
+If another key/value has a same index, then internal linkedlist is used to keep track of this second value (or 3rd and so on) to be stored at the same index. 
+In java 8, if there are 8 keys stored at the same index, then tree is used instead of linked list. 
+
+Package Level Access:
+Importing a package-access class outside of the package is illegal. Creating a package-access object outside the package is illegal.
+You don't need to import package level access classes in the same package (as you don't import other access-level modifier classes).
+
