@@ -3,6 +3,7 @@ package linked.list.from.memory;
 import java.util.NoSuchElementException;
 
 public class List<E> {
+	
 	private ListNode<E> first;
 
 	private ListNode<E> last;
@@ -10,7 +11,7 @@ public class List<E> {
 	private String name;
 
 	public List() {
-		this("linkedList");
+		this("LinkedList");
 	}
 
 	public List(String name) {
@@ -26,6 +27,31 @@ public class List<E> {
 			ListNode<E> newNode = new ListNode<>(data);
 			newNode.next = first;
 			first = newNode;
+		}
+	}
+	
+	E removeFromFront() {
+		if (isEmpty()) {
+			throw new NoSuchElementException(name + " is Empty");
+		}
+		E data = first.data;
+		if (first == last) {
+			first = last = null;
+		}
+		else {
+			first = first.next;
+		}
+		return data;
+	}
+
+	void insertAtBack(E data) {
+		if (isEmpty()) {
+			first = last = new ListNode<E>(data);
+		}
+		else {
+			ListNode<E> newNode = new ListNode<>(data);
+			last.next = newNode;
+			last = newNode;
 		}
 	}
 
@@ -50,31 +76,6 @@ public class List<E> {
 		return data;
 	}
 
-	void insertAtBack(E data) {
-		if (isEmpty()) {
-			first = last = new ListNode<E>(data);
-		}
-		else {
-			ListNode<E> newNode = new ListNode<>(data);
-			last.next = newNode;
-			last = newNode;
-		}
-	}
-
-	E removeFromFront() {
-		if (isEmpty()) {
-			throw new NoSuchElementException(name + " is Empty");
-		}
-		E data = first.data;
-		if (first == last) {
-			first = last = null;
-		}
-		else {
-			first = first.next;
-		}
-		return data;
-	}
-	
 	private boolean isEmpty() {
 		return first == null;
 	}
