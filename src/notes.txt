@@ -157,3 +157,24 @@ Package Level Access:
 Importing a package-access class outside of the package is illegal. Creating a package-access object outside the package is illegal.
 You don't need to import package level access classes in the same package (as you don't import other access-level modifier classes).
 
+Java 8 Stuff:
+UnaryOperator: represents a one-parameter method that returns a result of the same type as its parameter. 
+BinaryOperator: represents a two-parameter method that returns a result of the same type as its parameter.
+Consumer: represents a one-parameter method that returns void. (We use it in foreach).
+BiConsumer: represents a two-parameter method that returns void. (We use it in foreach).
+Function: represents a one-parameter method that performs a task on the parameter and returns a result--possibly of a different type than the paramter. (We use it in .map method and its variant)
+Predicate: represents a one-parameter method that returns a boolean result. (We use it in filter).
+Supplier: Represents a no-parameter method that returns a result.
+Collectors.toList() or Collectors.toSet() is called a downstream Collector.
+boxed: To convert primitives to wrapper object's stream.
+
+Intermediate Operations:
+filter, distinct, limit, map, and sorted are Intermediate operations. I don't know why sorted is in the intermediate list. I tested it and result says otherwise. Anyway, book says so.
+
+Terminal Operations:
+forEach, average, count, max, min, and reduce are terminal operations. 
+
+Short-circuit Operations:
+.findFirst, findAny, allMatch and anyMatch are short-circuit terminal operations.
+
+Stream interface is a generic Interface for performing stream operations on any reference type.
