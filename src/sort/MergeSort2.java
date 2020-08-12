@@ -20,6 +20,11 @@ public class MergeSort2 {
 	private static void mergeSort(int[] arr, int low, int high) {
 		if (low < high) {
 			int mid = (low + high) / 2;
+//			System.out.print("Focussing on: " );
+//			for(int i = low; i <= mid; i++) {
+//				System.out.print(arr[i]);
+//			}
+//			System.out.println("--End");
 			mergeSort(arr, low, mid);
 			mergeSort(arr, mid + 1, high);
 			merge(arr, low, mid, high);
@@ -38,12 +43,12 @@ public class MergeSort2 {
 			R[j] = A[mid + 1 + j];
 		}
 		
-		System.out.print("Left Array: [");
-		Arrays.stream(L).forEach(i -> System.out.print(i + ", "));
-		System.out.println("]");
-		System.out.print("Right Array: [");
-		Arrays.stream(R).forEach(i -> System.out.print(i + ", "));
-		System.out.println("]");
+//		System.out.print("Left Array: [");
+//		Arrays.stream(L).forEach(i -> System.out.print(i + ", "));
+//		System.out.println("]");
+//		System.out.print("Right Array: [");
+//		Arrays.stream(R).forEach(i -> System.out.print(i + ", "));
+//		System.out.println("]");
 
 		int k = low;
 		int i = 0;
